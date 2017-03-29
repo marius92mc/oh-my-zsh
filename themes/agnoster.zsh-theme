@@ -225,4 +225,6 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+autoload -U colors && colors
+
+PROMPT='%{%f%b%k%}$(build_prompt)'$'\n''               $ %{$reset_color%}'
